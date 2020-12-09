@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>★★★★★★</title>
+<link rel="stylesheet" href="../css/reset.css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+
+<link rel="stylesheet" href="aos.css" />
+<script type="text/javascript" src="aos.js"></script>
+<style>
+.box {width: 100%;}
+.box div {float: left; width: 50%;}
+div img {max-width:100%;}
+.box2 div {float: left; width: 25%;}
+</style>
+</head>
+<body>
+
+
+<div class="content">
+	<div class="box">
+		<div><img src="../img/summer_img01.jpg" alt=""></div>
+		<div><img src="../img/summer_img01.jpg" alt=""></div>
+		<div><img src="../img/summer_img01.jpg" alt=""></div>
+		<div><img src="../img/summer_img01.jpg" alt=""></div>
+	</div>
+	
+	<div class="box2">
+		<div><img src="../img/summer_img02.jpg" alt=""></div>
+		<div><img src="../img/summer_img02.jpg" alt=""></div>
+		<div><img src="../img/summer_img02.jpg" alt=""></div>
+		<div><img src="../img/summer_img02.jpg" alt=""></div>
+		<div><img src="../img/summer_img02.jpg" alt=""></div>
+		<div><img src="../img/summer_img02.jpg" alt=""></div>
+		<div><img src="../img/summer_img02.jpg" alt=""></div>
+		<div><img src="../img/summer_img02.jpg" alt=""></div>
+	</div>
+</div>
+
+
+<script>
+
+$('.box').attr('data-aos','fade-right');
+
+$('.box2 div').attr({'data-aos':'fade-down'});
+	var $delayList = $('.box2 div');
+	for (i=0; i<$delayList.size(); i++){
+		$delayList.eq(i).attr({'data-aos-delay':i*+'300'});
+	}
+
+
+$(function(){
+	
+
+
+	AOS.init({
+		// 전역 설정 : 
+		//disable : false,  // 허용되는 값 : 'phone', 'tablet', 'mobile', boolean, expression or function 
+		//startEvent : 'DOMContentLoaded',  // 문서, AOS가 
+		//initClassName : 'aos-init',  // 초기화 후 적용된 클래스 
+		//animatedClassName : 'aos-animate', // 클래스는 애니메이션에 적용 
+		//useClassNames : false,  // 스크롤에 클래스 같은 데이터 aos``의 내용을 추가 할 경우는 true 
+		//disableMutationObserver : false,  // 비활성화 자동 돌연변이 '탐지 (고급) 
+		//debounceDelay : 50,  // 지연 창 크기를 조정하는 동안 사용 된 디 바운스 (고급) 
+		//throttleDelay : 99,  // 페이지를 스크롤하는 동안 사용 된 스로틀 지연 (고급) 
+
+		//data-aos- 속성으로 요소별로 재정의 할 수있는 설정 : 
+		offset : 200,  // 원래 트리거 지점에서 오프셋 (px)
+		delay : 100,  // 0부터 3000까지의 값, 50ms 단계 포함 
+		duration : 300,  // 0부터 3000까지의 값, 50ms 단계 포함 
+		easing : 'ease',  // AOS 애니메이션에 대한 기본 이징 
+		once : false,  // 여부 애니메이션은 아래로 스크롤하는 동안 한 번만 발생해야합니다. 
+		//mirror : false,  // 요소를지나 스크롤하는 동안 애니메이션을 적용할지 여부 
+		//anchorPlacement : 'top-bottom',  // 애니메이션을 트리거해야하는 창과 관련된 요소의 위치 정의 
+		
+	});
+})
+
+</script>
+</body>
+</html>
